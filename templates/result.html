@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/stayles.css')}}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="brandname">
+                ML App
+            </div>
+            <h2>Fake News Detector</h2>
+        </div>
+    </header>
+    <p style="color:blue; font-size:20;text-align:center;"><b>Result</b></p>
+    <div class="results">
+        {% if prediction_title == 1 %}
+        <h2 style="color:red;">It is a Fake News.</h2>
+        {% elif prediction_title == 0 %}
+        <h2 style="color:green">It is not a Fake News.</h2>
+        {% endif %}
+    </div>
+
+</body>
+</html>
